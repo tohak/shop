@@ -1,0 +1,39 @@
+#To See H2 Console in Browser:
+# http://localhost:8080/h2-console
+# Enabling H2 Console
+
+spring:
+  messages:
+    basename: translations
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+  profiles:
+    active: dev
+logging:
+  level:
+    ROOT: INFO
+
+---
+# ===============================
+# DB
+# ===============================
+spring:
+  profiles: dev
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties.hibernate:
+      dialect: org.hibernate.dialect.H2Dialect
+      temp.use_jdbc_metadata_defaults: false
+      show_sql: false
+      format_sql: true
+      enable_lazy_load_no_trans: true #If you would like to keep Lazy Load and you are using Spring Boot
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
