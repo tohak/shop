@@ -13,7 +13,6 @@ spring:
 logging:
   level:
     ROOT: INFO
-
 ---
 # ===============================
 # DB
