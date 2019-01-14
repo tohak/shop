@@ -1,7 +1,7 @@
 package com.shop.dao;
 
-import com.shop.dao.castom.BaseRepository;
-import com.shop.domain.entety.User;
+import com.shop.dao.custom.BaseRepository;
+import com.shop.domain.entity.User;
 import org.springframework.stereotype.Repository;
 
 @Repository

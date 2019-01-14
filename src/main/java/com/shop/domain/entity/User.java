@@ -1,4 +1,4 @@
-package com.shop.domain.entety;
+package com.shop.domain.entity;
 
 import com.shop.domain.enums.UserRole;
 import com.shop.domain.enums.UserState;
@@ -104,6 +104,7 @@ public class User implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return getRoles();
     }
+
     public boolean isAdmin() {
         return roles.contains(UserRole.ADMIN);
     }
@@ -115,5 +116,6 @@ public class User implements UserDetails {
     public boolean isAnonymous() {
         return roles.contains(UserRole.ANONYMOUS);
     }
+
 
 }

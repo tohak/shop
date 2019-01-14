@@ -1,12 +1,13 @@
-package com.shop.domain.entety;
+package com.shop.domain.entity;
 
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /*
- * Доменая модель заказы, корзина
- */
+* Доменая модель категории товаров
+*/
 @Getter
 @Setter
 @AllArgsConstructor
@@ -14,16 +15,14 @@ import javax.persistence.*;
 @ToString(callSuper = true)
 @Builder
 @Entity
-@Table(name = "order_tbl")
-public class Order {
+@Table(name = "category_tbl")
+public class Category {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, updatable = false)
     private Long id;
 
-    @Column(name = "order_state")
-    private String state;
-
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "order")
-    private User user;
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    private Set<Product> products;
 }

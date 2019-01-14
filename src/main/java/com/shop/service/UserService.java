@@ -1,7 +1,7 @@
 package com.shop.service;
 
 import com.shop.dao.UserDAO;
-import com.shop.domain.entety.User;
+import com.shop.domain.entity.User;
 import com.shop.domain.enums.UserRole;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
