@@ -1,4 +1,4 @@
-package com.shop.dao.castom;
+package com.shop.dao.custom;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;

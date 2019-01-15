@@ -1,4 +1,4 @@
-package com.shop.domain.entety;
+package com.shop.domain.entity;
 
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
