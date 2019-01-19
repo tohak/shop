@@ -1,6 +1,7 @@
-package com.shop.domain.entity;
+package com.shop.domain.entity.other;
 
 import com.shop.domain.entity.base.BaseEntity;
+import com.shop.domain.entity.product.Product;
 import lombok.*;
 
 import javax.persistence.Entity;

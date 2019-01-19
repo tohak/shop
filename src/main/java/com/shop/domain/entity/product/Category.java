@@ -1,4 +1,4 @@
-package com.shop.domain.entity;
+package com.shop.domain.entity.product;
 
 import com.shop.domain.entity.base.BaseEntity;
 import lombok.*;

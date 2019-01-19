@@ -1,5 +1,6 @@
 package com.shop.domain.entity;
 
+import com.shop.domain.entity.product.Order;
 import com.shop.domain.enums.UserRole;
 import com.shop.domain.enums.UserState;
 import lombok.*;
