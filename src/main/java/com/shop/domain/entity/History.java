@@ -19,11 +19,10 @@ public class History extends BaseEntity {
     @Column(name = "created_on")
     private LocalDateTime createdOn;
 
-    @OneToOne
-    @JoinColumn(name = "product_id")
+    @OneToMany(mappedBy = "history", cascade = CascadeType.ALL)
     private Set<Product> products;
 
-    @OneToMany
+/*    @OneToMany
     @JoinColumn(name = "user_id")
-    private Set<User> users;
+    private Set<User> users;*/
 }

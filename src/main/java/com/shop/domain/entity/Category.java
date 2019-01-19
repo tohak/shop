@@ -1,5 +1,6 @@
 package com.shop.domain.entity;
 
+import com.shop.domain.entity.base.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,15 +14,10 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(callSuper = true)
-@Builder
+//@Builder()
 @Entity
 @Table(name = "category_tbl")
-public class Category {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false, updatable = false)
-    private Long id;
+public class Category extends BaseEntity {
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private Set<Product> products;

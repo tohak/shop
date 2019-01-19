@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "new_tbl")
 @ToString(callSuper = true)
 @Entity
-public class New extends BaseEntity {
+public class News extends BaseEntity {
 
     @Length(max = 100)
     @Column(name = "title_new")

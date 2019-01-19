@@ -1,5 +1,6 @@
 package com.shop.domain.entity;
 
+import com.shop.domain.entity.base.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -12,14 +13,10 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(callSuper = true)
-@Builder
+//@Builder
 @Entity
 @Table(name = "order_tbl")
-public class Order {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false, updatable = false)
-    private Long id;
+public class Order extends BaseEntity {
 
     @Column(name = "order_state")
     private String state;

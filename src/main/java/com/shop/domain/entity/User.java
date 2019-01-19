@@ -22,7 +22,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(callSuper = true)
-@Builder
+//@Builder
 @Entity
 @Table(name = "usr_tbl")
 public class User implements UserDetails {
@@ -59,6 +59,10 @@ public class User implements UserDetails {
     @OneToOne
     @JoinColumn(name = "fk_order_id")
     private Order order;
+
+    @OneToOne
+    @JoinColumn(name = "fk_account_id")
+    private Account account;
 
     @ElementCollection(targetClass = UserRole.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user2roles_tbl",

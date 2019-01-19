@@ -1,5 +1,6 @@
 package com.shop.domain.entity;
 
+import com.shop.domain.entity.base.BaseEntity;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
@@ -15,11 +16,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(callSuper = true)
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false, updatable = false)
-    private Long id;
+public class Product extends BaseEntity {
 
     @Length(max = 20)
     @Column(name = "name_product")
@@ -37,4 +34,8 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+
+    @ManyToOne
+    @JoinColumn(name = "history_id")
+    private History history;
 }

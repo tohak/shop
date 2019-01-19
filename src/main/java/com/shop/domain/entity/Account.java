@@ -1,6 +1,7 @@
 package com.shop.domain.entity;
 
 import com.shop.domain.entity.base.BaseEntity;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,11 +9,11 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.Set;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "account_tbl")
 @Entity
 public class Account extends BaseEntity {
@@ -25,6 +26,6 @@ public class Account extends BaseEntity {
     private BigDecimal totalSumm;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
-    private Set<User> userSet;
+    @JoinColumn(name = "fk_user_id")
+    private User user;
 }

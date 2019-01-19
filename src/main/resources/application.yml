@@ -24,11 +24,11 @@ spring:
       enabled: true
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties.hibernate:
       dialect: org.hibernate.dialect.H2Dialect
       temp.use_jdbc_metadata_defaults: false
-      show_sql: false
+      show_sql: true
       format_sql: true
       enable_lazy_load_no_trans: true #If you would like to keep Lazy Load and you are using Spring Boot
   datasource:

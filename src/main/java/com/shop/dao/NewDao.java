@@ -1,7 +1,7 @@
 package com.shop.dao;
 
 import com.shop.dao.custom.BaseRepository;
-import com.shop.domain.entity.New;
+import com.shop.domain.entity.News;
 
-public interface NewDao extends BaseRepository<New, Long> {
+public interface NewDao extends BaseRepository<News, Long> {
 }
